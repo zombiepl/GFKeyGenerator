@@ -1,0 +1,6 @@
+C:\Users\GKasztelaniec\source\repos\GKKeyGenerator\FGSaveToFile\bin\Debug\FGSaveToFile.dll
+C:\Users\GKasztelaniec\source\repos\GKKeyGenerator\FGSaveToFile\bin\Debug\FGSaveToFile.pdb
+C:\Users\GKasztelaniec\source\repos\GKKeyGenerator\FGSaveToFile\obj\Debug\FGSaveToFile.csprojResolveAssemblyReference.cache
+C:\Users\GKasztelaniec\source\repos\GKKeyGenerator\FGSaveToFile\obj\Debug\FGSaveToFile.csproj.CoreCompileInputs.cache
+C:\Users\GKasztelaniec\source\repos\GKKeyGenerator\FGSaveToFile\obj\Debug\FGSaveToFile.dll
+C:\Users\GKasztelaniec\source\repos\GKKeyGenerator\FGSaveToFile\obj\Debug\FGSaveToFile.pdb

@@ -1,0 +1,14 @@
+C:\Users\GKasztelaniec\source\repos\GKKeyGenerator\GKKeyGenerator\obj\Debug\GKKeyGenerator.csprojResolveAssemblyReference.cache
+C:\Users\GKasztelaniec\source\repos\GKKeyGenerator\GKKeyGenerator\obj\Debug\GKKeyGenerator.Form1.resources
+C:\Users\GKasztelaniec\source\repos\GKKeyGenerator\GKKeyGenerator\obj\Debug\GKKeyGenerator.Properties.Resources.resources
+C:\Users\GKasztelaniec\source\repos\GKKeyGenerator\GKKeyGenerator\obj\Debug\GKKeyGenerator.csproj.GenerateResource.Cache
+C:\Users\GKasztelaniec\source\repos\GKKeyGenerator\GKKeyGenerator\obj\Debug\GKKeyGenerator.csproj.CoreCompileInputs.cache
+C:\Users\GKasztelaniec\source\repos\GKKeyGenerator\GKKeyGenerator\bin\Debug\GKKeyGenerator.exe.config
+C:\Users\GKasztelaniec\source\repos\GKKeyGenerator\GKKeyGenerator\bin\Debug\GKKeyGenerator.exe
+C:\Users\GKasztelaniec\source\repos\GKKeyGenerator\GKKeyGenerator\bin\Debug\GKKeyGenerator.pdb
+C:\Users\GKasztelaniec\source\repos\GKKeyGenerator\GKKeyGenerator\bin\Debug\FGMailGenerator.dll
+C:\Users\GKasztelaniec\source\repos\GKKeyGenerator\GKKeyGenerator\bin\Debug\GKKeyGenerator.Interfaces.dll
+C:\Users\GKasztelaniec\source\repos\GKKeyGenerator\GKKeyGenerator\bin\Debug\FGMailGenerator.pdb
+C:\Users\GKasztelaniec\source\repos\GKKeyGenerator\GKKeyGenerator\bin\Debug\GKKeyGenerator.Interfaces.pdb
+C:\Users\GKasztelaniec\source\repos\GKKeyGenerator\GKKeyGenerator\obj\Debug\GKKeyGenerator.exe
+C:\Users\GKasztelaniec\source\repos\GKKeyGenerator\GKKeyGenerator\obj\Debug\GKKeyGenerator.pdb
