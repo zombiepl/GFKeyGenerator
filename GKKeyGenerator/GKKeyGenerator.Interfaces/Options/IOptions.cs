@@ -6,5 +6,6 @@
         string Host { get; set; }
         string Body { get; set; }
         int Port { get; set; }
+        bool ssl { get; set; }
     }
 }

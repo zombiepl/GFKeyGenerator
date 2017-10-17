@@ -1,4 +1,6 @@
-﻿namespace GKKeyGenerator.Interfaces.Core
+﻿using System;
+
+namespace GKKeyGenerator.Interfaces.Core
 {
     public interface IKeyGenerator
     {
@@ -6,5 +8,6 @@
         string Product { get; set; }
         string ProductModule { get; set; }
         int NumberOfModule { get; set; }
+        DateTime ValidDate { get; set; }
     }
 }

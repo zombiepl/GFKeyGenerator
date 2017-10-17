@@ -40,7 +40,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Core\IAESEncryptor.cs" />
     <Compile Include="Core\IKeyGenerator.cs" />
+    <Compile Include="Models\ICompany.cs" />
+    <Compile Include="Models\IModules.cs" />
+    <Compile Include="Models\IProduct.cs" />
     <Compile Include="Options\IOptions.cs" />
     <Compile Include="Options\ISaveOptions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

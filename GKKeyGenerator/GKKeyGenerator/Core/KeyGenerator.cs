@@ -1,4 +1,4 @@
-﻿using FGMailGenerator.Mail;
+﻿using System;
 using GKKeyGenerator.Interfaces.Core;
 
 namespace GKKeyGenerator.Core
@@ -9,5 +9,6 @@ namespace GKKeyGenerator.Core
         public string Product { get; set; }
         public string ProductModule { get; set; }
         public int NumberOfModule { get; set; }
+        public DateTime ValidDate { get; set; }
     }
 }
