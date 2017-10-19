@@ -47,20 +47,25 @@
   <ItemGroup>
     <Compile Include="Core\AESEncryptor.cs" />
     <Compile Include="Core\KeyGenerator.cs" />
-    <Compile Include="ERPXL_LASKOMEXDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ERPXL_LASKOMEXDataSet1.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="KeyGeneratorTestDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KeyGeneratorTestDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Models\Company.cs" />
     <Compile Include="Models\Modules.cs" />
     <Compile Include="Models\Product.cs" />
+    <Compile Include="Products.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Products.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -76,16 +81,27 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="ERPXL_LASKOMEXDataSet1.xsc">
-      <DependentUpon>ERPXL_LASKOMEXDataSet1.xsd</DependentUpon>
+    <None Include="KeyGeneratorTestDataSet.xsc">
+      <DependentUpon>KeyGeneratorTestDataSet.xsd</DependentUpon>
     </None>
-    <None Include="ERPXL_LASKOMEXDataSet1.xsd">
+    <None Include="KeyGeneratorTestDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>ERPXL_LASKOMEXDataSet1.Designer.cs</LastGenOutput>
+      <LastGenOutput>KeyGeneratorTestDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="ERPXL_LASKOMEXDataSet1.xss">
-      <DependentUpon>ERPXL_LASKOMEXDataSet1.xsd</DependentUpon>
+    <None Include="KeyGeneratorTestDataSet.xss">
+      <DependentUpon>KeyGeneratorTestDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Products.xsc">
+      <DependentUpon>Products.xsd</DependentUpon>
+    </None>
+    <None Include="Products.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Products.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Products.xss">
+      <DependentUpon>Products.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

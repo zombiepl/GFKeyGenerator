@@ -20,17 +20,17 @@ namespace GKKeyGenerator {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("ERPXL_LASKOMEXDataSet")]
+    [global::System.Xml.Serialization.XmlRootAttribute("KeyGeneratorTestDataSet")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class ERPXL_LASKOMEXDataSet : global::System.Data.DataSet {
+    public partial class KeyGeneratorTestDataSet : global::System.Data.DataSet {
         
-        private KntKartyDataTable tableKntKarty;
+        private CompanyDataTable tableCompany;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public ERPXL_LASKOMEXDataSet() {
+        public KeyGeneratorTestDataSet() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace GKKeyGenerator {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        protected ERPXL_LASKOMEXDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected KeyGeneratorTestDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace GKKeyGenerator {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["KntKarty"] != null)) {
-                    base.Tables.Add(new KntKartyDataTable(ds.Tables["KntKarty"]));
+                if ((ds.Tables["Company"] != null)) {
+                    base.Tables.Add(new CompanyDataTable(ds.Tables["Company"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace GKKeyGenerator {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public KntKartyDataTable KntKarty {
+        public CompanyDataTable Company {
             get {
-                return this.tableKntKarty;
+                return this.tableCompany;
             }
         }
         
@@ -127,7 +127,7 @@ namespace GKKeyGenerator {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            ERPXL_LASKOMEXDataSet cln = ((ERPXL_LASKOMEXDataSet)(base.Clone()));
+            KeyGeneratorTestDataSet cln = ((KeyGeneratorTestDataSet)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace GKKeyGenerator {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["KntKarty"] != null)) {
-                    base.Tables.Add(new KntKartyDataTable(ds.Tables["KntKarty"]));
+                if ((ds.Tables["Company"] != null)) {
+                    base.Tables.Add(new CompanyDataTable(ds.Tables["Company"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace GKKeyGenerator {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableKntKarty = ((KntKartyDataTable)(base.Tables["KntKarty"]));
+            this.tableCompany = ((CompanyDataTable)(base.Tables["Company"]));
             if ((initTable == true)) {
-                if ((this.tableKntKarty != null)) {
-                    this.tableKntKarty.InitVars();
+                if ((this.tableCompany != null)) {
+                    this.tableCompany.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace GKKeyGenerator {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "ERPXL_LASKOMEXDataSet";
+            this.DataSetName = "KeyGeneratorTestDataSet";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/ERPXL_LASKOMEXDataSet1.xsd";
+            this.Namespace = "http://tempuri.org/KeyGeneratorTestDataSet.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableKntKarty = new KntKartyDataTable();
-            base.Tables.Add(this.tableKntKarty);
+            this.tableCompany = new CompanyDataTable();
+            base.Tables.Add(this.tableCompany);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private bool ShouldSerializeKntKarty() {
+        private bool ShouldSerializeCompany() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace GKKeyGenerator {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            ERPXL_LASKOMEXDataSet ds = new ERPXL_LASKOMEXDataSet();
+            KeyGeneratorTestDataSet ds = new KeyGeneratorTestDataSet();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,21 +270,31 @@ namespace GKKeyGenerator {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public delegate void KntKartyRowChangeEventHandler(object sender, KntKartyRowChangeEvent e);
+        public delegate void CompanyRowChangeEventHandler(object sender, CompanyRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class KntKartyDataTable : global::System.Data.TypedTableBase<KntKartyRow> {
+        public partial class CompanyDataTable : global::System.Data.TypedTableBase<CompanyRow> {
             
-            private global::System.Data.DataColumn columnKnt_Nazwa1;
+            private global::System.Data.DataColumn columnid_company;
+            
+            private global::System.Data.DataColumn columnCompanyName;
+            
+            private global::System.Data.DataColumn columnNIP;
+            
+            private global::System.Data.DataColumn columnAdress;
+            
+            private global::System.Data.DataColumn columnCity;
+            
+            private global::System.Data.DataColumn columnPostCode;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public KntKartyDataTable() {
-                this.TableName = "KntKarty";
+            public CompanyDataTable() {
+                this.TableName = "Company";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -292,7 +302,7 @@ namespace GKKeyGenerator {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal KntKartyDataTable(global::System.Data.DataTable table) {
+            internal CompanyDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -309,16 +319,56 @@ namespace GKKeyGenerator {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected KntKartyDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected CompanyDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn Knt_Nazwa1Column {
+            public global::System.Data.DataColumn id_companyColumn {
                 get {
-                    return this.columnKnt_Nazwa1;
+                    return this.columnid_company;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn CompanyNameColumn {
+                get {
+                    return this.columnCompanyName;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn NIPColumn {
+                get {
+                    return this.columnNIP;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn AdressColumn {
+                get {
+                    return this.columnAdress;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn CityColumn {
+                get {
+                    return this.columnCity;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn PostCodeColumn {
+                get {
+                    return this.columnPostCode;
                 }
             }
             
@@ -333,45 +383,57 @@ namespace GKKeyGenerator {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public KntKartyRow this[int index] {
+            public CompanyRow this[int index] {
                 get {
-                    return ((KntKartyRow)(this.Rows[index]));
+                    return ((CompanyRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event KntKartyRowChangeEventHandler KntKartyRowChanging;
+            public event CompanyRowChangeEventHandler CompanyRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event KntKartyRowChangeEventHandler KntKartyRowChanged;
+            public event CompanyRowChangeEventHandler CompanyRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event KntKartyRowChangeEventHandler KntKartyRowDeleting;
+            public event CompanyRowChangeEventHandler CompanyRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event KntKartyRowChangeEventHandler KntKartyRowDeleted;
+            public event CompanyRowChangeEventHandler CompanyRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void AddKntKartyRow(KntKartyRow row) {
+            public void AddCompanyRow(CompanyRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public KntKartyRow AddKntKartyRow(string Knt_Nazwa1) {
-                KntKartyRow rowKntKartyRow = ((KntKartyRow)(this.NewRow()));
+            public CompanyRow AddCompanyRow(int id_company, string CompanyName, string NIP, string Adress, string City, string PostCode) {
+                CompanyRow rowCompanyRow = ((CompanyRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        Knt_Nazwa1};
-                rowKntKartyRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowKntKartyRow);
-                return rowKntKartyRow;
+                        id_company,
+                        CompanyName,
+                        NIP,
+                        Adress,
+                        City,
+                        PostCode};
+                rowCompanyRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowCompanyRow);
+                return rowCompanyRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public CompanyRow FindByid_company(int id_company) {
+                return ((CompanyRow)(this.Rows.Find(new object[] {
+                            id_company})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                KntKartyDataTable cln = ((KntKartyDataTable)(base.Clone()));
+                CompanyDataTable cln = ((CompanyDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -379,47 +441,72 @@ namespace GKKeyGenerator {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new KntKartyDataTable();
+                return new CompanyDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             internal void InitVars() {
-                this.columnKnt_Nazwa1 = base.Columns["Knt_Nazwa1"];
+                this.columnid_company = base.Columns["id_company"];
+                this.columnCompanyName = base.Columns["CompanyName"];
+                this.columnNIP = base.Columns["NIP"];
+                this.columnAdress = base.Columns["Adress"];
+                this.columnCity = base.Columns["City"];
+                this.columnPostCode = base.Columns["PostCode"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             private void InitClass() {
-                this.columnKnt_Nazwa1 = new global::System.Data.DataColumn("Knt_Nazwa1", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnKnt_Nazwa1);
-                this.columnKnt_Nazwa1.MaxLength = 50;
+                this.columnid_company = new global::System.Data.DataColumn("id_company", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnid_company);
+                this.columnCompanyName = new global::System.Data.DataColumn("CompanyName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCompanyName);
+                this.columnNIP = new global::System.Data.DataColumn("NIP", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNIP);
+                this.columnAdress = new global::System.Data.DataColumn("Adress", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAdress);
+                this.columnCity = new global::System.Data.DataColumn("City", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCity);
+                this.columnPostCode = new global::System.Data.DataColumn("PostCode", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPostCode);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnid_company}, true));
+                this.columnid_company.AllowDBNull = false;
+                this.columnid_company.Unique = true;
+                this.columnCompanyName.AllowDBNull = false;
+                this.columnCompanyName.MaxLength = 150;
+                this.columnNIP.AllowDBNull = false;
+                this.columnNIP.MaxLength = 20;
+                this.columnAdress.MaxLength = 100;
+                this.columnCity.MaxLength = 50;
+                this.columnPostCode.MaxLength = 10;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public KntKartyRow NewKntKartyRow() {
-                return ((KntKartyRow)(this.NewRow()));
+            public CompanyRow NewCompanyRow() {
+                return ((CompanyRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new KntKartyRow(builder);
+                return new CompanyRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(KntKartyRow);
+                return typeof(CompanyRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.KntKartyRowChanged != null)) {
-                    this.KntKartyRowChanged(this, new KntKartyRowChangeEvent(((KntKartyRow)(e.Row)), e.Action));
+                if ((this.CompanyRowChanged != null)) {
+                    this.CompanyRowChanged(this, new CompanyRowChangeEvent(((CompanyRow)(e.Row)), e.Action));
                 }
             }
             
@@ -427,8 +514,8 @@ namespace GKKeyGenerator {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.KntKartyRowChanging != null)) {
-                    this.KntKartyRowChanging(this, new KntKartyRowChangeEvent(((KntKartyRow)(e.Row)), e.Action));
+                if ((this.CompanyRowChanging != null)) {
+                    this.CompanyRowChanging(this, new CompanyRowChangeEvent(((CompanyRow)(e.Row)), e.Action));
                 }
             }
             
@@ -436,8 +523,8 @@ namespace GKKeyGenerator {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.KntKartyRowDeleted != null)) {
-                    this.KntKartyRowDeleted(this, new KntKartyRowChangeEvent(((KntKartyRow)(e.Row)), e.Action));
+                if ((this.CompanyRowDeleted != null)) {
+                    this.CompanyRowDeleted(this, new CompanyRowChangeEvent(((CompanyRow)(e.Row)), e.Action));
                 }
             }
             
@@ -445,14 +532,14 @@ namespace GKKeyGenerator {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.KntKartyRowDeleting != null)) {
-                    this.KntKartyRowDeleting(this, new KntKartyRowChangeEvent(((KntKartyRow)(e.Row)), e.Action));
+                if ((this.CompanyRowDeleting != null)) {
+                    this.CompanyRowDeleting(this, new CompanyRowChangeEvent(((CompanyRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void RemoveKntKartyRow(KntKartyRow row) {
+            public void RemoveCompanyRow(CompanyRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -461,7 +548,7 @@ namespace GKKeyGenerator {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                ERPXL_LASKOMEXDataSet ds = new ERPXL_LASKOMEXDataSet();
+                KeyGeneratorTestDataSet ds = new KeyGeneratorTestDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -479,7 +566,7 @@ namespace GKKeyGenerator {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "KntKartyDataTable";
+                attribute2.FixedValue = "CompanyDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -523,43 +610,132 @@ namespace GKKeyGenerator {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class KntKartyRow : global::System.Data.DataRow {
+        public partial class CompanyRow : global::System.Data.DataRow {
             
-            private KntKartyDataTable tableKntKarty;
+            private CompanyDataTable tableCompany;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal KntKartyRow(global::System.Data.DataRowBuilder rb) : 
+            internal CompanyRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableKntKarty = ((KntKartyDataTable)(this.Table));
+                this.tableCompany = ((CompanyDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string Knt_Nazwa1 {
+            public int id_company {
+                get {
+                    return ((int)(this[this.tableCompany.id_companyColumn]));
+                }
+                set {
+                    this[this.tableCompany.id_companyColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string CompanyName {
+                get {
+                    return ((string)(this[this.tableCompany.CompanyNameColumn]));
+                }
+                set {
+                    this[this.tableCompany.CompanyNameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string NIP {
+                get {
+                    return ((string)(this[this.tableCompany.NIPColumn]));
+                }
+                set {
+                    this[this.tableCompany.NIPColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string Adress {
                 get {
                     try {
-                        return ((string)(this[this.tableKntKarty.Knt_Nazwa1Column]));
+                        return ((string)(this[this.tableCompany.AdressColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Knt_Nazwa1\' in table \'KntKarty\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Adress\' in table \'Company\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableKntKarty.Knt_Nazwa1Column] = value;
+                    this[this.tableCompany.AdressColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsKnt_Nazwa1Null() {
-                return this.IsNull(this.tableKntKarty.Knt_Nazwa1Column);
+            public string City {
+                get {
+                    try {
+                        return ((string)(this[this.tableCompany.CityColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'City\' in table \'Company\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCompany.CityColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetKnt_Nazwa1Null() {
-                this[this.tableKntKarty.Knt_Nazwa1Column] = global::System.Convert.DBNull;
+            public string PostCode {
+                get {
+                    try {
+                        return ((string)(this[this.tableCompany.PostCodeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'PostCode\' in table \'Company\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCompany.PostCodeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsAdressNull() {
+                return this.IsNull(this.tableCompany.AdressColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetAdressNull() {
+                this[this.tableCompany.AdressColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsCityNull() {
+                return this.IsNull(this.tableCompany.CityColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetCityNull() {
+                this[this.tableCompany.CityColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsPostCodeNull() {
+                return this.IsNull(this.tableCompany.PostCodeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetPostCodeNull() {
+                this[this.tableCompany.PostCodeColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -567,22 +743,22 @@ namespace GKKeyGenerator {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public class KntKartyRowChangeEvent : global::System.EventArgs {
+        public class CompanyRowChangeEvent : global::System.EventArgs {
             
-            private KntKartyRow eventRow;
+            private CompanyRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public KntKartyRowChangeEvent(KntKartyRow row, global::System.Data.DataRowAction action) {
+            public CompanyRowChangeEvent(CompanyRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public KntKartyRow Row {
+            public CompanyRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -598,7 +774,7 @@ namespace GKKeyGenerator {
         }
     }
 }
-namespace GKKeyGenerator.ERPXL_LASKOMEXDataSetTableAdapters {
+namespace GKKeyGenerator.KeyGeneratorTestDataSetTableAdapters {
     
     
     /// <summary>
@@ -610,7 +786,7 @@ namespace GKKeyGenerator.ERPXL_LASKOMEXDataSetTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class KntKartyTableAdapter : global::System.ComponentModel.Component {
+    public partial class CompanyTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -624,7 +800,7 @@ namespace GKKeyGenerator.ERPXL_LASKOMEXDataSetTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public KntKartyTableAdapter() {
+        public CompanyTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -721,21 +897,65 @@ namespace GKKeyGenerator.ERPXL_LASKOMEXDataSetTableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "KntKarty";
-            tableMapping.ColumnMappings.Add("Knt_Nazwa1", "Knt_Nazwa1");
+            tableMapping.DataSetTable = "Company";
+            tableMapping.ColumnMappings.Add("id_company", "id_company");
+            tableMapping.ColumnMappings.Add("CompanyName", "CompanyName");
+            tableMapping.ColumnMappings.Add("NIP", "NIP");
+            tableMapping.ColumnMappings.Add("Adress", "Adress");
+            tableMapping.ColumnMappings.Add("City", "City");
+            tableMapping.ColumnMappings.Add("PostCode", "PostCode");
             this._adapter.TableMappings.Add(tableMapping);
+            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.DeleteCommand.Connection = this.Connection;
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Company] WHERE (([id_company] = @Original_id_company) AND ([CompanyName] = @Original_CompanyName) AND ([NIP] = @Original_NIP) AND ((@IsNull_Adress = 1 AND [Adress] IS NULL) OR ([Adress] = @Original_Adress)) AND ((@IsNull_City = 1 AND [City] IS NULL) OR ([City] = @Original_City)) AND ((@IsNull_PostCode = 1 AND [PostCode] IS NULL) OR ([PostCode] = @Original_PostCode)))";
+            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id_company", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_company", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CompanyName", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CompanyName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_NIP", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NIP", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Adress", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Adress", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Adress", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Adress", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_City", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "City", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_City", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "City", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_PostCode", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PostCode", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PostCode", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PostCode", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [CDN].[KntKarty] ([Knt_Nazwa1]) VALUES (@Knt_Nazwa1)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Company] ([id_company], [CompanyName], [NIP], [Adress], [City], [PostCode]) VALUES (@id_company, @CompanyName, @NIP, @Adress, @City, @PostCode);
+SELECT id_company, CompanyName, NIP, Adress, City, PostCode FROM Company WHERE (id_company = @id_company)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Knt_Nazwa1", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Knt_Nazwa1", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_company", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_company", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CompanyName", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CompanyName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NIP", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NIP", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Adress", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Adress", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@City", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "City", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PostCode", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PostCode", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.UpdateCommand.Connection = this.Connection;
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Company] SET [id_company] = @id_company, [CompanyName] = @CompanyName, [NIP] = @NIP, [Adress] = @Adress, [City] = @City, [PostCode] = @PostCode WHERE (([id_company] = @Original_id_company) AND ([CompanyName] = @Original_CompanyName) AND ([NIP] = @Original_NIP) AND ((@IsNull_Adress = 1 AND [Adress] IS NULL) OR ([Adress] = @Original_Adress)) AND ((@IsNull_City = 1 AND [City] IS NULL) OR ([City] = @Original_City)) AND ((@IsNull_PostCode = 1 AND [PostCode] IS NULL) OR ([PostCode] = @Original_PostCode)));
+SELECT id_company, CompanyName, NIP, Adress, City, PostCode FROM Company WHERE (id_company = @id_company)";
+            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_company", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_company", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CompanyName", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CompanyName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NIP", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NIP", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Adress", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Adress", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@City", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "City", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PostCode", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PostCode", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id_company", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_company", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CompanyName", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CompanyName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_NIP", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NIP", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Adress", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Adress", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Adress", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Adress", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_City", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "City", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_City", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "City", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_PostCode", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PostCode", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PostCode", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PostCode", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::GKKeyGenerator.Properties.Settings.Default.KeyGeneratorConnectionString;
+            this._connection.ConnectionString = global::GKKeyGenerator.Properties.Settings.Default.KeyGenCustomers;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -744,7 +964,7 @@ namespace GKKeyGenerator.ERPXL_LASKOMEXDataSetTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT Knt_Nazwa1 FROM CDN.KntKarty";
+            this._commandCollection[0].CommandText = "SELECT id_company, CompanyName, NIP, Adress, City, PostCode FROM dbo.Company";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -752,7 +972,7 @@ namespace GKKeyGenerator.ERPXL_LASKOMEXDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(ERPXL_LASKOMEXDataSet.KntKartyDataTable dataTable) {
+        public virtual int Fill(KeyGeneratorTestDataSet.CompanyDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -765,9 +985,9 @@ namespace GKKeyGenerator.ERPXL_LASKOMEXDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual ERPXL_LASKOMEXDataSet.KntKartyDataTable GetData() {
+        public virtual KeyGeneratorTestDataSet.CompanyDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            ERPXL_LASKOMEXDataSet.KntKartyDataTable dataTable = new ERPXL_LASKOMEXDataSet.KntKartyDataTable();
+            KeyGeneratorTestDataSet.CompanyDataTable dataTable = new KeyGeneratorTestDataSet.CompanyDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -775,15 +995,15 @@ namespace GKKeyGenerator.ERPXL_LASKOMEXDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(ERPXL_LASKOMEXDataSet.KntKartyDataTable dataTable) {
+        public virtual int Update(KeyGeneratorTestDataSet.CompanyDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(ERPXL_LASKOMEXDataSet dataSet) {
-            return this.Adapter.Update(dataSet, "KntKarty");
+        public virtual int Update(KeyGeneratorTestDataSet dataSet) {
+            return this.Adapter.Update(dataSet, "Company");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -804,13 +1024,96 @@ namespace GKKeyGenerator.ERPXL_LASKOMEXDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string Knt_Nazwa1) {
-            if ((Knt_Nazwa1 == null)) {
-                this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
+        public virtual int Delete(int Original_id_company, string Original_CompanyName, string Original_NIP, string Original_Adress, string Original_City, string Original_PostCode) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_id_company));
+            if ((Original_CompanyName == null)) {
+                throw new global::System.ArgumentNullException("Original_CompanyName");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(Knt_Nazwa1));
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_CompanyName));
+            }
+            if ((Original_NIP == null)) {
+                throw new global::System.ArgumentNullException("Original_NIP");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_NIP));
+            }
+            if ((Original_Adress == null)) {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_Adress));
+            }
+            if ((Original_City == null)) {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_City));
+            }
+            if ((Original_PostCode == null)) {
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((string)(Original_PostCode));
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
+            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.DeleteCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.DeleteCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
+        public virtual int Insert(int id_company, string CompanyName, string NIP, string Adress, string City, string PostCode) {
+            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(id_company));
+            if ((CompanyName == null)) {
+                throw new global::System.ArgumentNullException("CompanyName");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(CompanyName));
+            }
+            if ((NIP == null)) {
+                throw new global::System.ArgumentNullException("NIP");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(NIP));
+            }
+            if ((Adress == null)) {
+                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(Adress));
+            }
+            if ((City == null)) {
+                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(City));
+            }
+            if ((PostCode == null)) {
+                this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(PostCode));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -827,6 +1130,103 @@ namespace GKKeyGenerator.ERPXL_LASKOMEXDataSetTableAdapters {
                 }
             }
         }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(int id_company, string CompanyName, string NIP, string Adress, string City, string PostCode, int Original_id_company, string Original_CompanyName, string Original_NIP, string Original_Adress, string Original_City, string Original_PostCode) {
+            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(id_company));
+            if ((CompanyName == null)) {
+                throw new global::System.ArgumentNullException("CompanyName");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(CompanyName));
+            }
+            if ((NIP == null)) {
+                throw new global::System.ArgumentNullException("NIP");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(NIP));
+            }
+            if ((Adress == null)) {
+                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Adress));
+            }
+            if ((City == null)) {
+                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(City));
+            }
+            if ((PostCode == null)) {
+                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(PostCode));
+            }
+            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_id_company));
+            if ((Original_CompanyName == null)) {
+                throw new global::System.ArgumentNullException("Original_CompanyName");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Original_CompanyName));
+            }
+            if ((Original_NIP == null)) {
+                throw new global::System.ArgumentNullException("Original_NIP");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_NIP));
+            }
+            if ((Original_Adress == null)) {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_Adress));
+            }
+            if ((Original_City == null)) {
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(Original_City));
+            }
+            if ((Original_PostCode == null)) {
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(Original_PostCode));
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
+            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.UpdateCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.UpdateCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(string CompanyName, string NIP, string Adress, string City, string PostCode, int Original_id_company, string Original_CompanyName, string Original_NIP, string Original_Adress, string Original_City, string Original_PostCode) {
+            return this.Update(Original_id_company, CompanyName, NIP, Adress, City, PostCode, Original_id_company, Original_CompanyName, Original_NIP, Original_Adress, Original_City, Original_PostCode);
+        }
     }
     
     /// <summary>
@@ -841,7 +1241,7 @@ namespace GKKeyGenerator.ERPXL_LASKOMEXDataSetTableAdapters {
         
         private UpdateOrderOption _updateOrder;
         
-        private KntKartyTableAdapter _kntKartyTableAdapter;
+        private CompanyTableAdapter _companyTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -863,12 +1263,12 @@ namespace GKKeyGenerator.ERPXL_LASKOMEXDataSetTableAdapters {
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public KntKartyTableAdapter KntKartyTableAdapter {
+        public CompanyTableAdapter CompanyTableAdapter {
             get {
-                return this._kntKartyTableAdapter;
+                return this._companyTableAdapter;
             }
             set {
-                this._kntKartyTableAdapter = value;
+                this._companyTableAdapter = value;
             }
         }
         
@@ -891,9 +1291,9 @@ namespace GKKeyGenerator.ERPXL_LASKOMEXDataSetTableAdapters {
                 if ((this._connection != null)) {
                     return this._connection;
                 }
-                if (((this._kntKartyTableAdapter != null) 
-                            && (this._kntKartyTableAdapter.Connection != null))) {
-                    return this._kntKartyTableAdapter.Connection;
+                if (((this._companyTableAdapter != null) 
+                            && (this._companyTableAdapter.Connection != null))) {
+                    return this._companyTableAdapter.Connection;
                 }
                 return null;
             }
@@ -908,7 +1308,7 @@ namespace GKKeyGenerator.ERPXL_LASKOMEXDataSetTableAdapters {
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
-                if ((this._kntKartyTableAdapter != null)) {
+                if ((this._companyTableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -920,14 +1320,14 @@ namespace GKKeyGenerator.ERPXL_LASKOMEXDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateUpdatedRows(ERPXL_LASKOMEXDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(KeyGeneratorTestDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._kntKartyTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.KntKarty.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._companyTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Company.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._kntKartyTableAdapter.Update(updatedRows));
+                    result = (result + this._companyTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -939,13 +1339,13 @@ namespace GKKeyGenerator.ERPXL_LASKOMEXDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateInsertedRows(ERPXL_LASKOMEXDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(KeyGeneratorTestDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._kntKartyTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.KntKarty.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._companyTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Company.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._kntKartyTableAdapter.Update(addedRows));
+                    result = (result + this._companyTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -957,13 +1357,13 @@ namespace GKKeyGenerator.ERPXL_LASKOMEXDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateDeletedRows(ERPXL_LASKOMEXDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(KeyGeneratorTestDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._kntKartyTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.KntKarty.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._companyTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Company.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._kntKartyTableAdapter.Update(deletedRows));
+                    result = (result + this._companyTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -999,15 +1399,15 @@ namespace GKKeyGenerator.ERPXL_LASKOMEXDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public virtual int UpdateAll(ERPXL_LASKOMEXDataSet dataSet) {
+        public virtual int UpdateAll(KeyGeneratorTestDataSet dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
             if ((dataSet.HasChanges() == false)) {
                 return 0;
             }
-            if (((this._kntKartyTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._kntKartyTableAdapter.Connection) == false))) {
+            if (((this._companyTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._companyTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
@@ -1043,13 +1443,13 @@ namespace GKKeyGenerator.ERPXL_LASKOMEXDataSetTableAdapters {
             try {
                 // ---- Prepare for update -----------
                 //
-                if ((this._kntKartyTableAdapter != null)) {
-                    revertConnections.Add(this._kntKartyTableAdapter, this._kntKartyTableAdapter.Connection);
-                    this._kntKartyTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._kntKartyTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._kntKartyTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._kntKartyTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._kntKartyTableAdapter.Adapter);
+                if ((this._companyTableAdapter != null)) {
+                    revertConnections.Add(this._companyTableAdapter, this._companyTableAdapter.Connection);
+                    this._companyTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._companyTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._companyTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._companyTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._companyTableAdapter.Adapter);
                     }
                 }
                 // 
@@ -1110,9 +1510,9 @@ namespace GKKeyGenerator.ERPXL_LASKOMEXDataSetTableAdapters {
                 if (workConnOpened) {
                     workConnection.Close();
                 }
-                if ((this._kntKartyTableAdapter != null)) {
-                    this._kntKartyTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._kntKartyTableAdapter]));
-                    this._kntKartyTableAdapter.Transaction = null;
+                if ((this._companyTableAdapter != null)) {
+                    this._companyTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._companyTableAdapter]));
+                    this._companyTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

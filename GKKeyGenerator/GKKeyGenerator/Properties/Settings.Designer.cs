@@ -33,5 +33,16 @@ namespace GKKeyGenerator.Properties {
                 return ((string)(this["KeyGeneratorConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(local);Initial Catalog=KeyGeneratorTest;Persist Security Info=True;U" +
+            "ser ID=sa;Password=sa")]
+        public string KeyGenCustomers {
+            get {
+                return ((string)(this["KeyGenCustomers"]));
+            }
+        }
     }
 }

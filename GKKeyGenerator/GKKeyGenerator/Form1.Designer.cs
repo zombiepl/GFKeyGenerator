@@ -30,9 +30,14 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.ClientName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NIP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Adress = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.companyBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.keyGeneratorTestDataSet = new GKKeyGenerator.KeyGeneratorTestDataSet();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.plikToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.zapiszToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -42,55 +47,101 @@
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.ProductName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Zaznacz = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.productsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+          
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.ModuleName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NumberOfModule = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ValidDate = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.label3 = new System.Windows.Forms.Label();
-            this.eRPXL_LASKOMEXDataSet = new GKKeyGenerator.ERPXL_LASKOMEXDataSet();
-            this.kntKartyBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.kntKartyTableAdapter = new GKKeyGenerator.ERPXL_LASKOMEXDataSetTableAdapters.KntKartyTableAdapter();
-            this.kntNazwa1DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.companyTableAdapter = new GKKeyGenerator.KeyGeneratorTestDataSetTableAdapters.CompanyTableAdapter();
+         
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.companyBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.keyGeneratorTestDataSet)).BeginInit();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).BeginInit();
+            
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.eRPXL_LASKOMEXDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kntKartyBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ClientName,
-            this.NIP,
-            this.Adress,
-            this.kntNazwa1DataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.kntKartyBindingSource;
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6});
+            this.dataGridView1.DataSource = this.companyBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(0, 57);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(718, 150);
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.Size = new System.Drawing.Size(885, 150);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
-            // ClientName
+            // dataGridViewTextBoxColumn1
             // 
-            this.ClientName.HeaderText = "ClientName";
-            this.ClientName.Name = "ClientName";
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "id_company";
+            this.dataGridViewTextBoxColumn1.HeaderText = "id_company";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
             // 
-            // NIP
+            // dataGridViewTextBoxColumn2
             // 
-            this.NIP.HeaderText = "NIP";
-            this.NIP.Name = "NIP";
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "CompanyName";
+            this.dataGridViewTextBoxColumn2.HeaderText = "CompanyName";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
             // 
-            // Adress
+            // dataGridViewTextBoxColumn3
             // 
-            this.Adress.HeaderText = "Adress";
-            this.Adress.Name = "Adress";
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "NIP";
+            this.dataGridViewTextBoxColumn3.HeaderText = "NIP";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "Adress";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Adress";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "City";
+            this.dataGridViewTextBoxColumn5.HeaderText = "City";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "PostCode";
+            this.dataGridViewTextBoxColumn6.HeaderText = "PostCode";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            // 
+            // companyBindingSource
+            // 
+            this.companyBindingSource.DataMember = "Company";
+            this.companyBindingSource.DataSource = this.keyGeneratorTestDataSet;
+            this.companyBindingSource.CurrentChanged += new System.EventHandler(this.companyBindingSource_CurrentChanged);
+            // 
+            // keyGeneratorTestDataSet
+            // 
+            this.keyGeneratorTestDataSet.DataSetName = "KeyGeneratorTestDataSet";
+            this.keyGeneratorTestDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // menuStrip1
             // 
@@ -99,7 +150,7 @@
             this.konfiguracjaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(885, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(905, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -149,24 +200,23 @@
             // 
             // dataGridView2
             // 
+            this.dataGridView2.AllowUserToAddRows = false;
+            this.dataGridView2.AllowUserToDeleteRows = false;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ProductName,
             this.Zaznacz});
             this.dataGridView2.Location = new System.Drawing.Point(0, 254);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(718, 107);
+            this.dataGridView2.ReadOnly = true;
+            this.dataGridView2.Size = new System.Drawing.Size(885, 107);
             this.dataGridView2.TabIndex = 3;
-            // 
-            // ProductName
-            // 
-            this.ProductName.HeaderText = "ProductName";
-            this.ProductName.Name = "ProductName";
             // 
             // Zaznacz
             // 
             this.Zaznacz.HeaderText = "Zaznacz";
             this.Zaznacz.Name = "Zaznacz";
+            this.Zaznacz.ReadOnly = true;
+        
             // 
             // label2
             // 
@@ -179,30 +229,22 @@
             // 
             // dataGridView3
             // 
+            this.dataGridView3.AllowUserToAddRows = false;
+            this.dataGridView3.AllowUserToDeleteRows = false;
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ModuleName,
-            this.NumberOfModule,
             this.ValidDate});
             this.dataGridView3.Location = new System.Drawing.Point(3, 412);
             this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.Size = new System.Drawing.Size(718, 107);
+            this.dataGridView3.ReadOnly = true;
+            this.dataGridView3.Size = new System.Drawing.Size(438, 107);
             this.dataGridView3.TabIndex = 5;
-            // 
-            // ModuleName
-            // 
-            this.ModuleName.HeaderText = "ModuleName";
-            this.ModuleName.Name = "ModuleName";
-            // 
-            // NumberOfModule
-            // 
-            this.NumberOfModule.HeaderText = "NumberOfModule";
-            this.NumberOfModule.Name = "NumberOfModule";
             // 
             // ValidDate
             // 
             this.ValidDate.HeaderText = "ValidDate";
             this.ValidDate.Name = "ValidDate";
+            this.ValidDate.ReadOnly = true;
             // 
             // label3
             // 
@@ -213,31 +255,47 @@
             this.label3.TabIndex = 6;
             this.label3.Text = "Modules";
             // 
-            // eRPXL_LASKOMEXDataSet
+            // button1
             // 
-            this.eRPXL_LASKOMEXDataSet.DataSetName = "ERPXL_LASKOMEXDataSet";
-            this.eRPXL_LASKOMEXDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.button1.Location = new System.Drawing.Point(753, 412);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(95, 23);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "Generate Key";
+            this.button1.UseVisualStyleBackColor = true;
             // 
-            // kntKartyBindingSource
+            // button2
             // 
-            this.kntKartyBindingSource.DataMember = "KntKarty";
-            this.kntKartyBindingSource.DataSource = this.eRPXL_LASKOMEXDataSet;
+            this.button2.Location = new System.Drawing.Point(753, 455);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(95, 23);
+            this.button2.TabIndex = 8;
+            this.button2.Text = "Save Key";
+            this.button2.UseVisualStyleBackColor = true;
             // 
-            // kntKartyTableAdapter
+            // button3
             // 
-            this.kntKartyTableAdapter.ClearBeforeFill = true;
+            this.button3.Location = new System.Drawing.Point(753, 496);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(95, 23);
+            this.button3.TabIndex = 9;
+            this.button3.Text = "Send Key";
+            this.button3.UseVisualStyleBackColor = true;
             // 
-            // kntNazwa1DataGridViewTextBoxColumn
+            // companyTableAdapter
             // 
-            this.kntNazwa1DataGridViewTextBoxColumn.DataPropertyName = "Knt_Nazwa1";
-            this.kntNazwa1DataGridViewTextBoxColumn.HeaderText = "Knt_Nazwa1";
-            this.kntNazwa1DataGridViewTextBoxColumn.Name = "kntNazwa1DataGridViewTextBoxColumn";
+            this.companyTableAdapter.ClearBeforeFill = true;
+            // 
+
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(885, 531);
+            this.ClientSize = new System.Drawing.Size(905, 539);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dataGridView3);
             this.Controls.Add(this.label2);
@@ -250,12 +308,14 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.companyBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.keyGeneratorTestDataSet)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).EndInit();
+            
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.eRPXL_LASKOMEXDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kntKartyBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -273,21 +333,33 @@
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView2;
-        private new System.Windows.Forms.DataGridViewTextBoxColumn ProductName;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dataGridView3;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ClientName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NIP;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Adress;
+        private System.Windows.Forms.DataGridViewTextBoxColumn productVersionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idcompanyDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn companyNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nIPDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn adressDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cityDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn postCodeDataGridViewTextBoxColumn;
+        private KeyGeneratorTestDataSet keyGeneratorTestDataSet;
+        private System.Windows.Forms.BindingSource companyBindingSource;
+        private KeyGeneratorTestDataSetTableAdapters.CompanyTableAdapter companyTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        
+        private System.Windows.Forms.BindingSource productsBindingSource;
+       
         private System.Windows.Forms.DataGridViewCheckBoxColumn Zaznacz;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ModuleName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NumberOfModule;
         private System.Windows.Forms.DataGridViewComboBoxColumn ValidDate;
-        private ERPXL_LASKOMEXDataSet eRPXL_LASKOMEXDataSet;
-        private System.Windows.Forms.BindingSource kntKartyBindingSource;
-        private ERPXL_LASKOMEXDataSetTableAdapters.KntKartyTableAdapter kntKartyTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn kntNazwa1DataGridViewTextBoxColumn;
     }
 }
 
