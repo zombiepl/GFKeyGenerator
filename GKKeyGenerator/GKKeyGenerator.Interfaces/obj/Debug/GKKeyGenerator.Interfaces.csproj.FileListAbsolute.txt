@@ -3,4 +3,3 @@ C:\Users\GKasztelaniec\source\repos\GKKeyGenerator\GKKeyGenerator.Interfaces\bin
 C:\Users\GKasztelaniec\source\repos\GKKeyGenerator\GKKeyGenerator.Interfaces\obj\Debug\GKKeyGenerator.Interfaces.csproj.CoreCompileInputs.cache
 C:\Users\GKasztelaniec\source\repos\GKKeyGenerator\GKKeyGenerator.Interfaces\obj\Debug\GKKeyGenerator.Interfaces.dll
 C:\Users\GKasztelaniec\source\repos\GKKeyGenerator\GKKeyGenerator.Interfaces\obj\Debug\GKKeyGenerator.Interfaces.pdb
-C:\Users\GKasztelaniec\source\repos\GKKeyGenerator\GKKeyGenerator.Interfaces\obj\Debug\GKKeyGenerator.Interfaces.csprojResolveAssemblyReference.cache
