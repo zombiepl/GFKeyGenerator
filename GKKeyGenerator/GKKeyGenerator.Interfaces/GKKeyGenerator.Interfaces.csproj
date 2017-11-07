@@ -40,7 +40,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Core\IAESEncryptor.cs" />
     <Compile Include="Core\IKeyGenerator.cs" />
     <Compile Include="Models\ICompany.cs" />
     <Compile Include="Models\IModules.cs" />

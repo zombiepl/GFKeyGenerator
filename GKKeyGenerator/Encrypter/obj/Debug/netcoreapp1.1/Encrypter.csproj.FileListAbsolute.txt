@@ -1,0 +1,8 @@
+C:\Users\GKasztelaniec\source\repos\GKKeyGenerator\Encrypter\bin\Debug\netcoreapp1.1\Encrypter.deps.json
+C:\Users\GKasztelaniec\source\repos\GKKeyGenerator\Encrypter\bin\Debug\netcoreapp1.1\Encrypter.dll
+C:\Users\GKasztelaniec\source\repos\GKKeyGenerator\Encrypter\bin\Debug\netcoreapp1.1\Encrypter.pdb
+C:\Users\GKasztelaniec\source\repos\GKKeyGenerator\Encrypter\obj\Debug\netcoreapp1.1\Encrypter.csprojResolveAssemblyReference.cache
+C:\Users\GKasztelaniec\source\repos\GKKeyGenerator\Encrypter\obj\Debug\netcoreapp1.1\Encrypter.csproj.CoreCompileInputs.cache
+C:\Users\GKasztelaniec\source\repos\GKKeyGenerator\Encrypter\obj\Debug\netcoreapp1.1\Encrypter.AssemblyInfo.cs
+C:\Users\GKasztelaniec\source\repos\GKKeyGenerator\Encrypter\obj\Debug\netcoreapp1.1\Encrypter.dll
+C:\Users\GKasztelaniec\source\repos\GKKeyGenerator\Encrypter\obj\Debug\netcoreapp1.1\Encrypter.pdb

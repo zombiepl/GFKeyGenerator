@@ -1,5 +1,6 @@
 C:\Users\GKasztelaniec\source\repos\GKKeyGenerator\FGMailGenerator\bin\Debug\FGMailGenerator.dll
 C:\Users\GKasztelaniec\source\repos\GKKeyGenerator\FGMailGenerator\bin\Debug\FGMailGenerator.pdb
+C:\Users\GKasztelaniec\source\repos\GKKeyGenerator\FGMailGenerator\obj\Debug\FGMailGenerator.csprojResolveAssemblyReference.cache
 C:\Users\GKasztelaniec\source\repos\GKKeyGenerator\FGMailGenerator\obj\Debug\FGMailGenerator.csproj.CoreCompileInputs.cache
 C:\Users\GKasztelaniec\source\repos\GKKeyGenerator\FGMailGenerator\obj\Debug\FGMailGenerator.dll
 C:\Users\GKasztelaniec\source\repos\GKKeyGenerator\FGMailGenerator\obj\Debug\FGMailGenerator.pdb

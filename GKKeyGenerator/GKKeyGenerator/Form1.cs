@@ -72,9 +72,6 @@ namespace GKKeyGenerator
                 dataGridView2.Columns[2].ReadOnly = true;
                 dataGridView2.Columns[3].ReadOnly = true;
             }
-            
-
-
 
             // dataGridView2.Refresh();
 
@@ -136,6 +133,15 @@ namespace GKKeyGenerator
                 dataGridView3.Columns[2].ReadOnly = true;
             }
         }
-        
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            //company.companyNIP = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            new Kontrahent().Show();
+        }
     }
 }
