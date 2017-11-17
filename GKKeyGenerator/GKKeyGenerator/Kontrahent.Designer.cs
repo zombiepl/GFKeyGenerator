@@ -102,7 +102,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(223, 85);
+            this.label7.Location = new System.Drawing.Point(220, 85);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(77, 13);
             this.label7.TabIndex = 6;
@@ -131,7 +131,7 @@
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(306, 83);
+            this.textBox4.Location = new System.Drawing.Point(306, 82);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(64, 20);
             this.textBox4.TabIndex = 10;
@@ -151,7 +151,7 @@
             this.button1.TabIndex = 12;
             this.button1.Text = "Zapisz";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // button2
             // 

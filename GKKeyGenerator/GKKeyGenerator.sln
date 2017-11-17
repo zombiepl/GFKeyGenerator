@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FGMailGenerator", "FGMailGe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FGSaveToFile", "FGSaveToFile\FGSaveToFile.csproj", "{D4CF8DE1-3718-458C-87B6-B7AC52B6EB3A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProject1", "UnitTestProject1\UnitTestProject1.csproj", "{A9720555-B584-4C45-908B-CA2B570A51FD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProjectSendEmail", "UnitTestProject1\UnitTestProjectSendEmail.csproj", "{A9720555-B584-4C45-908B-CA2B570A51FD}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Encrypter", "Encrypter\Encrypter.csproj", "{8958D12D-6307-47D1-8CC7-46D69C62C768}"
 EndProject
