@@ -5,6 +5,7 @@ namespace GKKeyGenerator.Models
 {
     public class Company : Product, ICompany
     {
+        public string companyId { get; set; }
         public string companyName { get; set; }
         public string companyNIP { get; set; }
         public string companyAdress { get; set; }

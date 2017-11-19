@@ -13,3 +13,5 @@ C:\Users\GKasztelaniec\source\repos\GKKeyGenerator\GKKeyGenerator\bin\Debug\FGMa
 C:\Users\GKasztelaniec\source\repos\GKKeyGenerator\GKKeyGenerator\bin\Debug\GKKeyGenerator.Interfaces.pdb
 C:\Users\GKasztelaniec\source\repos\GKKeyGenerator\GKKeyGenerator\obj\Debug\GKKeyGenerator.exe
 C:\Users\GKasztelaniec\source\repos\GKKeyGenerator\GKKeyGenerator\obj\Debug\GKKeyGenerator.pdb
+C:\Users\GKasztelaniec\source\repos\GKKeyGenerator\GKKeyGenerator\bin\Debug\Validators.dll
+C:\Users\GKasztelaniec\source\repos\GKKeyGenerator\GKKeyGenerator\bin\Debug\Validators.pdb

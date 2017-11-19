@@ -11,6 +11,7 @@ namespace GKKeyGenerator
     public partial class Form1 : Form
     {
         private Kontrahent _kontrahent;
+        private int ProductId;
         public Form1()
         {
             InitializeComponent();
@@ -18,21 +19,14 @@ namespace GKKeyGenerator
 
         public string CompanyId { get; set; }
         SqlCommand command1 = new SqlCommand();
-
         DataTable data1 = new DataTable();
-
         SqlConnection connect =
                 new SqlConnection("Data Source=(local);Initial Catalog=KeyGeneratorTest;Persist Security Info=True;User ID=sa;Password=sa");
 
         private void Form1_Load(object sender, System.EventArgs e)
         {
             
-            command1.Connection = connect;
-            command1.CommandText = "select * from dbo.company";
-
-            SqlDataAdapter dataAdapter1 = new SqlDataAdapter(command1);
-            dataAdapter1.Fill(data1);
-            dataGridView1.DataSource = data1;
+            DataGrid1Fill();
             //label3.Text = connect.State.ToString();
             // TODO: This line of code loads data into the 'products._Products' table. You can move, or remove it, as needed.
 
@@ -43,6 +37,7 @@ namespace GKKeyGenerator
             // TODO: This line of code loads data into the 'keyGeneratorTestDataSet.Company' table. You can move, or remove it, as needed.
 
             this.dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            
             this.dataGridView2.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView3.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             
@@ -102,24 +97,40 @@ namespace GKKeyGenerator
             }
         }
 
+        public void DataGrid1Fill()
+        {
+            dataGridView1.DataSource = null;
+            dataGridView1.Rows.Clear();
+
+            command1.Connection = connect;
+            command1.CommandText = "select * from dbo.company";
+
+            SqlDataAdapter dataAdapter1 = new SqlDataAdapter(command1);
+            dataAdapter1.Fill(data1);
+            dataGridView1.DataSource = data1;
+
+        }
+
         private void dataGridView2_CellClick_1(object sender, DataGridViewCellEventArgs e)
         {
             this.dataGridView3.DataSource = null;
             this.dataGridView3.Rows.Clear();
             //this.dataGridView3.DataSource = this.getnew
-            var ProductId = dataGridView2.CurrentRow.Index + 1; //datagrid numerowany od0
+
+            ProductId = dataGridView2.CurrentRow.Index + 1; //datagrid numerowany od0
             SqlCommand command3 = new SqlCommand();
             DataTable data3 = new DataTable();
             command3.Connection = connect;
-            
+
             SqlDataAdapter dataAdapter3 = new SqlDataAdapter(command3);
-          
+
             command3.Parameters.AddWithValue("@ProductId", ProductId);
-            command3.CommandText ="select distinct m.id_module, m.Module_name from dbo.modules m, dbo.customerModules cm, dbo.Products p where m.id_module = cm.Id_module and m.id_product = @ProductId";
-            
+            command3.CommandText = "select distinct m.id_module, m.Module_name from dbo.modules m, dbo.customerModules cm, dbo.Products p where m.id_module = cm.Id_module and m.id_product = @ProductId";
+
             dataAdapter3.Fill(data3);
             dataGridView3.DataSource = data3;
             command3.Parameters.Clear();
+            
             if (dataGridView3.Columns.Count == 3)
             {
                 dataGridView3.Columns[1].ReadOnly = true;
@@ -139,45 +150,35 @@ namespace GKKeyGenerator
 
         private void button13_Click(object sender, EventArgs e)//refresh
         {
-           dataGridView1.Refresh();
+            //dataGridView1.Refresh();
+            //this.XXXTableAdapter.Fill(this.DataSet.XXX);
+            DataGrid1Fill();
+
         }
 
         private void button14_Click(object sender, EventArgs e)//pokaż
         {
             Company company = new Company();
             
-            var CompanyId = dataGridView1.CurrentRow.Index + 1;
+            int SCompanyId = dataGridView1.CurrentRow.Index + 1;
+
+
+            company.companyId = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            company.companyName = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            company.companyNIP = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+            company.companyAdress = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+            company.companyCity = dataGridView1.CurrentRow.Cells[4].Value.ToString();
+            company.companyPCode = dataGridView1.CurrentRow.Cells[5].Value.ToString();
             
-            SqlCommand commSelComName = new SqlCommand();
-            SqlCommand commSelComNIP = new SqlCommand();
-            SqlCommand commSelComAdress = new SqlCommand();
-            SqlCommand commSelComCity = new SqlCommand();
-            SqlCommand commSelComPostC = new SqlCommand();
-            commSelComName.Connection = connect;
 
 
-            commSelComName.Parameters.AddWithValue("@CustomerId", CompanyId);
-            commSelComNIP.Parameters.AddWithValue("@CustomerId", CompanyId);
-            commSelComAdress.Parameters.AddWithValue("@CustomerId", CompanyId);
-            commSelComCity.Parameters.AddWithValue("@CustomerId", CompanyId);
-            commSelComPostC.Parameters.AddWithValue("@CustomerId", CompanyId);
-            commSelComName.CommandText = "select CompanyName from dbo.company where id_company = @CustomerId";
-            commSelComNIP.CommandText = "select NIP from dbo.company where id_company = @CustomerId";
-            commSelComAdress.CommandText = "select Adress from dbo.company where id_company = @CustomerId";
-            commSelComCity.CommandText = "select City from dbo.company where id_company = @CustomerId";
-            commSelComPostC.CommandText = "select PostCode from dbo.company where id_company = @CustomerId";
-
-            
-            company.companyName = commSelComName.ToString();
-            company.companyNIP = commSelComNIP.ToString();
-            company.companyAdress = commSelComAdress.ToString();
-            company.companyPCode = commSelComPostC.ToString();
-            company.companyCity = commSelComCity.ToString();
-            //new Kontrahent().Show();
+            Kontrahent P_kontrahent = new Kontrahent();
+            P_kontrahent.PokazDane(company);   //TO DO Do uzupełniania
+            P_kontrahent.Show();
             //commSelCust.Connection = connect;
             //SqlDataAdapter dataAdapter3 = new SqlDataAdapter(commSelCust);
-            
-            
+
+
         }
     }
 }

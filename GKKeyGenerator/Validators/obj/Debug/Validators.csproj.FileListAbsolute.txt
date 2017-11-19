@@ -1,0 +1,5 @@
+C:\Users\GKasztelaniec\source\repos\GKKeyGenerator\Validators\bin\Debug\Validators.dll
+C:\Users\GKasztelaniec\source\repos\GKKeyGenerator\Validators\bin\Debug\Validators.pdb
+C:\Users\GKasztelaniec\source\repos\GKKeyGenerator\Validators\obj\Debug\Validators.csproj.CoreCompileInputs.cache
+C:\Users\GKasztelaniec\source\repos\GKKeyGenerator\Validators\obj\Debug\Validators.dll
+C:\Users\GKasztelaniec\source\repos\GKKeyGenerator\Validators\obj\Debug\Validators.pdb

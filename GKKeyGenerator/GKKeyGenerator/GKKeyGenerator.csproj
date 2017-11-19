@@ -101,6 +101,10 @@
       <Project>{38ce7bc5-1eca-4fb9-b1d8-9c054d83add9}</Project>
       <Name>GKKeyGenerator.Interfaces</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Validators\Validators.csproj">
+      <Project>{74a3d7a0-9706-403b-a214-8f4b95277928}</Project>
+      <Name>Validators</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

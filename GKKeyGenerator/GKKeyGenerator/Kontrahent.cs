@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using GKKeyGenerator.Interfaces.Models;
 using GKKeyGenerator.Models;
 using System.Data.SqlClient;
+using Validators;
 
 
 namespace GKKeyGenerator
@@ -33,7 +34,7 @@ namespace GKKeyGenerator
         private void button2_Click(object sender, EventArgs e) //ok
         {
             SaveDataToDatabase();
-            Close();
+            Close();//przeniesc zapis do bazy do innej motody i zrobić zabezpieczenie zamkniecia jak zły nip
         }
 
        // private Form1 _form1; //kompozycja... or not... ?
@@ -41,51 +42,67 @@ namespace GKKeyGenerator
         private void SaveDataToDatabase()
         {
              //dopisac obsługe zdublowanych danych formatka->obiekt->baza (porównanie obiektów)
-                Company company = new Company();
+            Company company = new Company();
+
+            
             company.companyName = this.textBox1.Text;
             company.companyNIP = this.textBox2.Text;
+
             company.companyAdress = this.textBox3.Text;
             company.companyPCode = this.textBox4.Text;
             company.companyCity = this.textBox5.Text;
-
-
-            String _connectionString = "Data Source=(local);Initial Catalog=KeyGeneratorTest;Persist Security Info=True;User ID=sa;Password=sa";
-
-            using (SqlConnection connection = new SqlConnection(_connectionString))
+            if (Validator.IsValid(company.companyNIP))
             {
-                String query = "insert into dbo.Company (id_company, CompanyName,NIP,Adress,City,PostCode) values ((select max (id_company) from dbo.Company)+1, @companyName, @companyNIP, @companyAdress, @CompanyCity, @companyPCode)";
-
-                using (SqlCommand command = new SqlCommand(query, connection))
+                String _connectionString = "Data Source=(local);Initial Catalog=KeyGeneratorTest;Persist Security Info=True;User ID=sa;Password=sa";
+                using (SqlConnection connection = new SqlConnection(_connectionString))
                 {
-                    command.Parameters.AddWithValue("@companyName", company.companyName);
-                    command.Parameters.AddWithValue("@companyNIP", company.companyNIP);
-                    command.Parameters.AddWithValue("@companyAdress", company.companyAdress);
-                    command.Parameters.AddWithValue("@companyPCode", company.companyPCode);
-                    command.Parameters.AddWithValue("@CompanyCity", company.companyCity);
+                    String query =
+                        "insert into dbo.Company (id_company, CompanyName,NIP,Adress,City,PostCode) values ((select max (id_company) from dbo.Company)+1, @companyName, @companyNIP, @companyAdress, @CompanyCity, @companyPCode)";
 
-                    connection.Open();
-                    int result = command.ExecuteNonQuery();
-                    command.Parameters.Clear();
-                    // Check Error
-                    if (result < 0)
+                    using (SqlCommand command = new SqlCommand(query, connection))
                     {
-                        MessageBox.Show("Blad ladowania do bazy!");
-                    }
-                    // _form1.RefreshDataGridV1(); //publiczna z klasy form1 - 
-                    //RefreshDataGridV1(); //dziedziczona po Form1
+                        command.Parameters.AddWithValue("@companyName", company.companyName);
+                        command.Parameters.AddWithValue("@companyNIP", company.companyNIP);
+                        command.Parameters.AddWithValue("@companyAdress", company.companyAdress);
+                        command.Parameters.AddWithValue("@companyPCode", company.companyPCode);
+                        command.Parameters.AddWithValue("@CompanyCity", company.companyCity);
 
+                        connection.Open();
+                        int result = command.ExecuteNonQuery();
+                        command.Parameters.Clear();
+                        // Check Error
+                        if (result < 0)
+                        {
+                            MessageBox.Show("Blad ladowania do bazy!","Error", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                        }
+
+                    }
                 }
             }
-        
-             //   using (SqlCommand commSelId = SqlCommand((SELECT MAX(id_company)FROM dbo.Company),connection);
-             //   label2.Text =commSel
-            //listview1 odswierz-refresh
+
+
+            else
+            {
+                MessageBox.Show("Błędny NIP","Error",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+            }
+           
+
 
         }
+        
 
-        private void PokazDane()
+    
+
+        public void PokazDane(Company company)
         {
-            textBox1.Enabled = false;
+            button1.Enabled = false;
+            button2.Enabled = false;
+            label2.Text = company.companyId;
+            textBox1.Text = company.companyName;
+            textBox2.Text = company.companyNIP;
+            textBox3.Text = company.companyAdress;
+            textBox4.Text = company.companyPCode;
+            textBox5.Text = company.companyCity;
         }
 
         private void button1_Click_1(object sender, EventArgs e)//zapisz
