@@ -10,7 +10,7 @@ namespace GKKeyGenerator
 {
     public partial class Form1 : Form
     {
-        private Kontrahent _kontrahent;
+        //private Kontrahent _kontrahent;
         private int ProductId;
         public Form1()
         {
@@ -63,20 +63,17 @@ namespace GKKeyGenerator
             command2.Parameters.Clear();
             if (dataGridView2.Columns.Count == 4)
             {
-                dataGridView2.Columns[1].ReadOnly = true;
-                dataGridView2.Columns[2].ReadOnly = true;
-                dataGridView2.Columns[3].ReadOnly = true;
+                  dataGridView2.Columns[1].ReadOnly = true;
+                  dataGridView2.Columns[2].ReadOnly = true;
+                  dataGridView2.Columns[3].ReadOnly = true;
             }
-            }
-
-
-
-        private void companyBindingSource_CurrentChanged(object sender, System.EventArgs e)
-        {
-   
+            
         }
 
-        private void button1_Click(object sender, System.EventArgs e)
+
+
+
+        private void button1_Click(object sender, System.EventArgs e)//generuj
         {
 
             Company company = new Company();
@@ -89,15 +86,13 @@ namespace GKKeyGenerator
                 {
                     //company.ProductList.Add(item.Cells[2].Value.ToString());
                     company.ProductList.Add(new Product());
-                    {
-                        
-                    }
+                   
                 }
                 
             }
         }
 
-        public void DataGrid1Fill()
+        public void DataGrid1Fill()//wypenilienie grida1
         {
             dataGridView1.DataSource = null;
             dataGridView1.Rows.Clear();
@@ -138,9 +133,12 @@ namespace GKKeyGenerator
             }
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void button5_Click(object sender, EventArgs e)//edytuj
         {
             //company.companyNIP = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+            Kontrahent kontrahent = new Kontrahent();
+            kontrahent.EdytujDane(FillCompanyO());
+            kontrahent.Show();
         }
 
         private void button4_Click(object sender, EventArgs e)//dodaj
@@ -150,35 +148,28 @@ namespace GKKeyGenerator
 
         private void button13_Click(object sender, EventArgs e)//refresh
         {
-            //dataGridView1.Refresh();
-            //this.XXXTableAdapter.Fill(this.DataSet.XXX);
             DataGrid1Fill();
-
         }
 
-        private void button14_Click(object sender, EventArgs e)//pokaż
+        public Company FillCompanyO()
         {
             Company company = new Company();
-            
             int SCompanyId = dataGridView1.CurrentRow.Index + 1;
-
-
             company.companyId = dataGridView1.CurrentRow.Cells[0].Value.ToString();
             company.companyName = dataGridView1.CurrentRow.Cells[1].Value.ToString();
             company.companyNIP = dataGridView1.CurrentRow.Cells[2].Value.ToString();
             company.companyAdress = dataGridView1.CurrentRow.Cells[3].Value.ToString();
             company.companyCity = dataGridView1.CurrentRow.Cells[4].Value.ToString();
             company.companyPCode = dataGridView1.CurrentRow.Cells[5].Value.ToString();
-            
+            return company;
 
+        }
 
-            Kontrahent P_kontrahent = new Kontrahent();
-            P_kontrahent.PokazDane(company);   //TO DO Do uzupełniania
+        private void button14_Click(object sender, EventArgs e)//pokaż
+        {
+            Kontrahent P_kontrahent = new Kontrahent();//formatka
+            P_kontrahent.PokazDane(FillCompanyO());   
             P_kontrahent.Show();
-            //commSelCust.Connection = connect;
-            //SqlDataAdapter dataAdapter3 = new SqlDataAdapter(commSelCust);
-
-
         }
     }
 }

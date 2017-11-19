@@ -90,13 +90,23 @@ namespace GKKeyGenerator
 
         }
         
-
+        
     
 
         public void PokazDane(Company company)
         {
             button1.Enabled = false;
             button2.Enabled = false;
+            label2.Text = company.companyId;
+            textBox1.Text = company.companyName;
+            textBox2.Text = company.companyNIP;
+            textBox3.Text = company.companyAdress;
+            textBox4.Text = company.companyPCode;
+            textBox5.Text = company.companyCity;
+        }
+
+        public void EdytujDane(Company company)
+        {
             label2.Text = company.companyId;
             textBox1.Text = company.companyName;
             textBox2.Text = company.companyNIP;
