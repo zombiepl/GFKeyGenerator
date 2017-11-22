@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Core\KeyGenerator.cs" />
+    <Compile Include="Core\Queries.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
