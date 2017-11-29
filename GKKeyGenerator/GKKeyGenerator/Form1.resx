@@ -126,14 +126,14 @@
   <metadata name="Zaznacz.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="ZaznaczModuł.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="ZaznaczModul.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="button13.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAARgAAAEZCAYAAABM0jopAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsAAAA7AAWrWiQkAACwHSURBVHhe7Z0J8F7T/f/tYk1iS6jYl1CMSmv3MxUxqb2o
+        YQUAAAAJcEhZcwAADr4AAA6+AepCscAAACwHSURBVHhe7Z0J8F7T/f/tYk1iS6jYl1CMSmv3MxUxqb2o
         rfaoraYq1dFWpM0QQxMZYwglqUFRYkZFK2LfiyAkLUESJhJL7ETtzv//Pp7PN5/v+Z5zl+e593nu8n7N
         fOa5z71nu+d8zvueu527hCGEkJygwBBCcoMCQwjJDQoMISQ3KDA15Ntvv20stQedX7vzJp2FAlMzknb2
         LISAYkIoMDUlTmgoDiQLKDCEkNygwBBCcoMCQwjJDQoMISQ3KDCEkNygwNSMLO8OJU2Ld6TqCwWmgugO

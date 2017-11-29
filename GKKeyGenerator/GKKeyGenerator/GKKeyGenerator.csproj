@@ -60,6 +60,7 @@
       <DependentUpon>Kontrahent.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Company.cs" />
+    <Compile Include="Models\CustomerModules.cs" />
     <Compile Include="Models\Modules.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Program.cs" />
@@ -97,6 +98,10 @@
     <ProjectReference Include="..\FGMailGenerator\FGMailGenerator.csproj">
       <Project>{ecad0049-e2d0-4ee7-91b1-125751595122}</Project>
       <Name>FGMailGenerator</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FGSaveToFile\FGSaveToFile.csproj">
+      <Project>{d4cf8de1-3718-458c-87b6-b7ac52b6eb3a}</Project>
+      <Name>FGSaveToFile</Name>
     </ProjectReference>
     <ProjectReference Include="..\GKKeyGenerator.Interfaces\GKKeyGenerator.Interfaces.csproj">
       <Project>{38ce7bc5-1eca-4fb9-b1d8-9c054d83add9}</Project>

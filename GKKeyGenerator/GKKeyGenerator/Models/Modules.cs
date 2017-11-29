@@ -5,6 +5,6 @@ namespace GKKeyGenerator.Models
 {
     public class Modules : IModules
     {
-        public List<IModules> modules { get; set; }
+        public string Name { get; set; }
     }
 }

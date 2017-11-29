@@ -1,14 +1,9 @@
-﻿namespace GKKeyGenerator.Interfaces.Models
-{
+﻿using System.Collections.Generic;
 
-    /*
-    select c.companyName, c.nip, p.productName, m.module_name
-    from customerModules cm, modules m, products p, companya c
-    where cm.id_company = c.id_company and cm.id_product = p.id_product and cm.id_module = m.id_module 
-     */
+namespace GKKeyGenerator.Interfaces.Models
+{
     public interface ICustomerModules
     {
-
-        
+        Dictionary<IProduct, List<IModules>> ProductList { get; set; }
     }
 }

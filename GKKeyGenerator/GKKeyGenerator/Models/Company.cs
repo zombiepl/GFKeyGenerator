@@ -3,7 +3,7 @@ using GKKeyGenerator.Interfaces.Models;
 
 namespace GKKeyGenerator.Models
 {
-    public class Company : Product, ICompany
+    public class Company : ICompany
     {
         public string companyId { get; set; }
         public string companyName { get; set; }

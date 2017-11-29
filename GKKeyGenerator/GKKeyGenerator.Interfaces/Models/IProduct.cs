@@ -4,7 +4,8 @@ namespace GKKeyGenerator.Interfaces.Models
 {
     public interface IProduct
     {
-        List<IProduct> ProductList { get; set; }
-        
+        string Name { get;set; }
+    
+
     }
 }

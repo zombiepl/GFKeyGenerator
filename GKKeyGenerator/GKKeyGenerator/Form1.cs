@@ -4,6 +4,8 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Diagnostics;
 using System.Windows.Forms;
+using FGSaveToFile;
+using GKKeyGenerator.Core;
 using GKKeyGenerator.Interfaces.Models;
 using GKKeyGenerator.Models;
 
@@ -22,7 +24,10 @@ namespace GKKeyGenerator
         SqlCommand command1 = new SqlCommand();
         DataTable data1 = new DataTable();
         SqlConnection connect = new SqlConnection("Data Source=(local);Initial Catalog=KeyGeneratorTest;Persist Security Info=True;User ID=sa;Password=sa");
+        //private string MagicKey;
+        private List<string> MagicList;
 
+        private KeyGenerator keyGenereator;
         public void ProductListFill()
         {
             SqlDataAdapter PLda = new SqlDataAdapter("select productname from dbo.products",connect);
@@ -103,23 +108,42 @@ namespace GKKeyGenerator
             command3.Parameters.AddWithValue("@ProductId", ProductId); //"@ProductId", ProductId
             DataGrid3Fill(DataGrid3Query); //wypełnienie listą modułow
         }
-        
 
-        private void button1_Click(object sender, System.EventArgs e)//generuj
+
+        private void button1_Click(object sender, System.EventArgs e) //generuj klucz
         {
+            keyGenereator = new KeyGenerator();
+            Company companyKey = new Company();
+            companyKey.companyNIP = dataGridView1.CurrentRow.Cells[2].Value.ToString();
 
-            Company company = new Company();
-            company.companyNIP = dataGridView1.CurrentRow.Cells[2].Value.ToString();
-            company.ProductList = new List<IProduct>();
+            CustomerModules CustomerModulesKey = new CustomerModules();
+            CustomerModulesKey.ProductList = new Dictionary<IProduct, List<IModules>>();
 
-            foreach (DataGridViewRow item in dataGridView2.Rows)
+            foreach (DataGridViewRow datarow in dataGridView2.Rows)
             {
-                if (Convert.ToBoolean(item.Cells[Zaznacz.Name].Value))
-                {
-                 company.ProductList.Add(new Product());
-                }
+                datarow.Selected = true;
                 
+                if (Convert.ToBoolean(datarow.Cells[Zaznacz.Name].Value))
+                {
+                    var product = new Product{Name = datarow.Cells[2].Value.ToString() };
+                    var moduleList = new List<IModules>();
+
+                    foreach (DataGridViewRow dt in dataGridView3.Rows)
+                    {
+                        if (Convert.ToBoolean(dt.Cells[ZaznaczModul.Name].Value))
+                        {
+                            moduleList.Add(new Modules {Name = dt.Cells[1].Value.ToString()});
+                        }
+                    }
+
+                    CustomerModulesKey.ProductList.Add(product, moduleList);
+                }
+                datarow.Selected = false;
             }
+            
+            var MagicKey = keyGenereator.GenerateKey(companyKey.companyNIP, CustomerModulesKey);
+            //przekazany customermoduleskey wraz ze wszystkimi polami (listami)
+
         }
 
         public void DataGrid1Fill()//wypenilenie grida1
@@ -235,13 +259,13 @@ namespace GKKeyGenerator
         }
 
         private void button8_Click(object sender, EventArgs e)//-> products remove
-        {
+        {//null do tabeli CustomerModules, zabezpiecznie jeśli są w użyciu moduły
             //ProductId
             
         }
 
         private void button11_Click(object sender, EventArgs e)//-> modules remove UPDATE NULL
-        {
+        {//null do tabeli CustomeModules
             command3.Parameters.AddWithValue("@CompanyId", CompanyId); 
             DataGrid2Fill("update CustomerModules set id_module=null where id_company = @CompanyId"); //zabezpieczyć na productID
         }
@@ -250,6 +274,13 @@ namespace GKKeyGenerator
         {
             command3.Parameters.AddWithValue("@CompanyId", CompanyId); 
             DataGrid3Fill(DataGrid3Query); 
+        }
+
+        private void button2_Click(object sender, EventArgs e)//save to file
+        {
+            List< string> MagicList = new List<string>();
+            MagicList.Add(keyGenereator.MagicWord);
+            Storage.Save(MagicList);
         }
     }
 }

@@ -4,6 +4,6 @@ namespace GKKeyGenerator.Interfaces.Models
 {
     public interface IModules
     {
-        List<IModules> modules { get; set; }
+        string Name { get; set; }
     }
 }

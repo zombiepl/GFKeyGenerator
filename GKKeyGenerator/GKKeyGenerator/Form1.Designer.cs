@@ -42,7 +42,7 @@
             this.Zaznacz = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.ZaznaczModuł = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.ZaznaczModul = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.label3 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -170,18 +170,18 @@
             this.dataGridView3.AllowUserToDeleteRows = false;
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ZaznaczModuł});
+            this.ZaznaczModul});
             this.dataGridView3.Location = new System.Drawing.Point(3, 412);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.Size = new System.Drawing.Size(535, 107);
             this.dataGridView3.TabIndex = 5;
             // 
-            // ZaznaczModuł
+            // ZaznaczModul
             // 
-            this.ZaznaczModuł.HeaderText = "Zaznacz";
-            this.ZaznaczModuł.Name = "ZaznaczModuł";
-            this.ZaznaczModuł.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.ZaznaczModuł.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.ZaznaczModul.HeaderText = "Zaznacz";
+            this.ZaznaczModul.Name = "ZaznaczModul";
+            this.ZaznaczModul.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.ZaznaczModul.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // label3
             // 
@@ -210,6 +210,7 @@
             this.button2.TabIndex = 8;
             this.button2.Text = "Save Key";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -440,7 +441,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
        
         private System.Windows.Forms.DataGridViewCheckBoxColumn Zaznacz;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn ZaznaczModuł;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
@@ -456,6 +456,7 @@
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Button button15;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn ZaznaczModul;
     }
 }
 

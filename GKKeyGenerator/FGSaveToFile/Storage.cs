@@ -1,15 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Runtime.Remoting.Messaging;
 using System.Windows.Forms;
 
 namespace FGSaveToFile
 {
     public class Storage : IStorage
     {
-        private SaveFileDialog _save;
+        private static SaveFileDialog _save;
         
-        public bool Save(List<string> dataList)
+        public static bool Save(List<string> dataList)
         {
             try
             {
@@ -30,9 +31,11 @@ namespace FGSaveToFile
             }
             catch (Exception e)
             {
-                MessageBox.Show("Zjebało się: " + e.Message);
+                MessageBox.Show("Something is wrong " + e.Message);
                 throw;
             }
+            
         }
+        
     }
 }

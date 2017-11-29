@@ -10,9 +10,7 @@ namespace GKKeyGenerator.Core
     {
         List<string> queriesLst = new List<string>();
         
-
         
-
         
 
     }
