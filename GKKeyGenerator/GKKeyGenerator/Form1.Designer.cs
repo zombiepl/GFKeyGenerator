@@ -32,7 +32,6 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.plikToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.zapiszToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.zakończToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.konfiguracjaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.konfiguracjaEmailToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -95,17 +94,10 @@
             // plikToolStripMenuItem
             // 
             this.plikToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.zapiszToolStripMenuItem,
             this.zakończToolStripMenuItem});
             this.plikToolStripMenuItem.Name = "plikToolStripMenuItem";
             this.plikToolStripMenuItem.Size = new System.Drawing.Size(34, 20);
             this.plikToolStripMenuItem.Text = "Plik";
-            // 
-            // zapiszToolStripMenuItem
-            // 
-            this.zapiszToolStripMenuItem.Name = "zapiszToolStripMenuItem";
-            this.zapiszToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
-            this.zapiszToolStripMenuItem.Text = "Zapisz";
             // 
             // zakończToolStripMenuItem
             // 
@@ -126,6 +118,7 @@
             this.konfiguracjaEmailToolStripMenuItem.Name = "konfiguracjaEmailToolStripMenuItem";
             this.konfiguracjaEmailToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
             this.konfiguracjaEmailToolStripMenuItem.Text = "Konfiguracja Email";
+            this.konfiguracjaEmailToolStripMenuItem.Click += new System.EventHandler(this.konfiguracjaEmailToolStripMenuItem_Click);
             // 
             // label1
             // 
@@ -220,6 +213,7 @@
             this.button3.TabIndex = 9;
             this.button3.Text = "Send Key";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -249,6 +243,7 @@
             this.button6.TabIndex = 12;
             this.button6.Text = "Usuń";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button7
             // 
@@ -259,6 +254,7 @@
             this.button7.Text = "Zapisz";
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Visible = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button9
             // 
@@ -268,6 +264,7 @@
             this.button9.TabIndex = 13;
             this.button9.Text = "<-";
             this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // button10
             // 
@@ -362,6 +359,7 @@
             this.button15.TabIndex = 26;
             this.button15.Text = "<-";
             this.button15.UseVisualStyleBackColor = true;
+            this.button15.Click += new System.EventHandler(this.button15_Click);
             // 
             // Form1
             // 
@@ -412,7 +410,6 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem plikToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem zapiszToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem zakończToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem konfiguracjaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem konfiguracjaEmailToolStripMenuItem;

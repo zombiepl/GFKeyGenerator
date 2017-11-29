@@ -98,21 +98,21 @@ namespace GKKeyGenerator
             button1.Enabled = false;
             button2.Enabled = false;
             label2.Text = company.companyId;
-            textBox1.Text = company.companyName;
-            textBox2.Text = company.companyNIP;
-            textBox3.Text = company.companyAdress;
-            textBox4.Text = company.companyPCode;
-            textBox5.Text = company.companyCity;
+            textBox1.Text = company.companyName.Trim();
+            textBox2.Text = company.companyNIP.Trim();
+            textBox3.Text = company.companyAdress.Trim();
+            textBox4.Text = company.companyPCode.Trim();
+            textBox5.Text = company.companyCity.Trim();
         }
 
         public void EdytujDane(Company company)
         {
-            label2.Text = company.companyId;
-            textBox1.Text = company.companyName;
-            textBox2.Text = company.companyNIP;
-            textBox3.Text = company.companyAdress;
-            textBox4.Text = company.companyPCode;
-            textBox5.Text = company.companyCity;
+            label2.Text = company.companyId.Trim();
+            textBox1.Text = company.companyName.Trim();
+            textBox2.Text = company.companyNIP.Trim();
+            textBox3.Text = company.companyAdress.Trim();
+            textBox4.Text = company.companyPCode.Trim();
+            textBox5.Text = company.companyCity.Trim();
         }
 
         private void button1_Click_1(object sender, EventArgs e)//zapisz

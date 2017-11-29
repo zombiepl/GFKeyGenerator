@@ -11,10 +11,11 @@ namespace FGMailGenerator.Mail
         private MailMessage _mailMessage;
         private SmtpClient _client;
         public bool ssl = true;
-
+                                                                //string body,
         public MailManager(string host, int port, string subject, string body, string from, string password, string emailRecipient)
-        {
-            Fill(host, port, subject, body, from, password, emailRecipient);
+        {                           //
+            Fill(host, port, subject, body, from,  password, emailRecipient);
+            
         }
 
         public MailManager(string host, int port, string subject, string body, string from, string password, string emailRecipient, string path)
@@ -29,7 +30,7 @@ namespace FGMailGenerator.Mail
             _mailMessage.Attachments.Add(new Attachment(ms, fileName));
         }
 
-        private void Fill(string host, int port, string subject, string body, string from, string password, string emailRecipient)
+        public void Fill(string host, int port, string subject, string body, string from, string password, string emailRecipient)
         {
             _client = new SmtpClient(host, port);
             _client.UseDefaultCredentials = false;

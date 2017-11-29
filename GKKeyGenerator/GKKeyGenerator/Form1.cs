@@ -8,6 +8,7 @@ using FGSaveToFile;
 using GKKeyGenerator.Core;
 using GKKeyGenerator.Interfaces.Models;
 using GKKeyGenerator.Models;
+using FGMailGenerator.Mail;
 
 namespace GKKeyGenerator
 {
@@ -260,8 +261,9 @@ namespace GKKeyGenerator
 
         private void button8_Click(object sender, EventArgs e)//-> products remove
         {//null do tabeli CustomerModules, zabezpiecznie jeśli są w użyciu moduły
-            //ProductId
-            
+         //ProductId
+            MessageBox.Show("You can't use this yet!", "Not implemented", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+
         }
 
         private void button11_Click(object sender, EventArgs e)//-> modules remove UPDATE NULL
@@ -281,6 +283,42 @@ namespace GKKeyGenerator
             List< string> MagicList = new List<string>();
             MagicList.Add(keyGenereator.MagicWord);
             Storage.Save(MagicList);
+        }
+
+        private void button7_Click(object sender, EventArgs e)//zapisz produkt
+        {
+            MessageBox.Show("You can't use this yet!", "Not implemented", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("You can't use this yet!", "Not implemented", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("You can't use this yet!", "Not implemented", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+
+        }
+
+        private void button6_Click(object sender, EventArgs e)  //usun customer
+        {
+            MessageBox.Show("You can't use this yet!", "Not implemented", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+
+        }
+
+        private void konfiguracjaEmailToolStripMenuItem_Click(object sender, EventArgs e) //konfiguracja email menu
+        {
+            MessageBox.Show("You can't use this yet!", "Not implemented", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)//send
+        {
+            //"smtp.wp.pl", 587, "Test", "TESTTET", "filipvirus@wp.pl", "Filipvirus", "zombi3s@gmail.com"
+            MailManager mailManager = new MailManager("smtp.wp.pl", 587, "Test", keyGenereator.MagicWord, "filipvirus@wp.pl", "Filipvirus", "zombi3s@gmail.com");
+            mailManager.Send();
         }
     }
 }

@@ -10,7 +10,9 @@ namespace UnitTestProject1
         [TestMethod]
         public void TestMethod1()
         {
-            MailManager mailManager = new MailManager("smtp.wp.pl", 587, "Test", "TESTTET", "filipvirus@wp.pl","Filipvirus", "zombi3s@gmail.com" );
+            string mail = "tresc";
+            //MailManager mailManager = new MailManager("smtp.wp.pl", 587, "Test", "TESTTET", "filipvirus@wp.pl","Filipvirus", "zombi3s@gmail.com" );
+            MailManager mailManager = new MailManager("smtp.wp.pl", 587, "Test", mail, "filipvirus@wp.pl", "Filipvirus", "zombi3s@gmail.com");
             mailManager.Send();
         }
     }
